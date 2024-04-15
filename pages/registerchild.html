@@ -4,59 +4,101 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Child Registration - Day Star</title>
+    <!---====css=====--->
+    <link rel="stylesheet" href="/style/child.css">
+    <!---iconout css-->
+    <!-- <link rel="stylesheet" href="https://unicons.iconsout.com/release/v4.0.0/css/line.css"> -->
+    
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary"></nav>
-    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-      <li class="nav-item">
-        <a class="nav-link active" aria-current="page" href="registerchild.html">Registration</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">About</a>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-          Registration
-        </a>
-        <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="pages/registerchild.html">Child Registration</a></li>
-          <li><a class="dropdown-item" href="pages/sitterregistration.html">Sitter Registration</a></li>
-          <li><hr class="dropdown-divider"></li>
-          <li><a class="dropdown-item" href="">Admin Login</a></li>
-        </ul>
-      </li>
-     
-    </ul>
-    
-    <h2>Child Registration Form</h2>
-    <form action="">
-        <form>
-            <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">Child's name</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                
-            <div class="mb-3">
-              <label for="exampleInputEmail1" class="form-label">Age(months)</label>
-              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+  <div id="message"></div>
+   <div class="container">
+    <header>Child Registration</header>
+
+    <form action="#" id="childform">
+      <div class="form first">
+        <div class="details personal">
+          <span class="title">Personal Details</span>
+          
+          <div class="fields">
+            <div class="input-field">
+              <label>Full Name</label>
+              <input type="text" id ="name" placeholder="Enter your name" >
+            </div>
+
+            <div class="input-field">
+              <label>Date of Birth</label>
+              <input type="date" id ="dateofbirth" placeholder="Enter birth date" >
+            </div>
+
+            <div class="input-field">
+              <label>Age</label>
+              <input type="text" id ="age" placeholder="Enter age" >
+            </div>
+
+            <div class="input-field">
+              <label>Gender</label>
+              <input type="text" id ="gender"placeholder="Enter gender">
+            </div>
+
+            <div class="input-field">
+              <label>Mother's Name</label>
+              <input type="text"id ="mothername" placeholder="Enter name" >
+            </div>
+
+            <div class="input-field">
+              <label>Father's Name</label>
+              <input type="text"id ="fathername" placeholder="Enter name ">
+            </div>
+
+            <div class="input-field">
+              <label>Mother's Contact</label>
+              <input type="text"id ="mothercontact" placeholder="Enter moblie number">
+            </div>
+
+            <div class="input-field">
+              <label>Father's Contact</label>
+              <input type="text" id ="fathercontact" placeholder="Enter moblienumber">
+            </div>
+
+            <div class="input-field">
+              <label>Identification</label>
+              <input type="text" id ="babynumber" placeholder="Enter Baby's number">
+            </div>
+
+            <div class="input-field">
+              <label>Location</label>
+              <input type="text"id ="location" placeholder="Enter place of residence ">
+            </div>
+
+            <div class="input-field">
+              <label>Who brought child</label>
+              <input type="text"id ="broughtchild" placeholder="Enter name">
+            </div>
+
+            <div class="input-field">
+              <label>Fee paid</label>
+              <input type="text" id ="feepaid" placeholder="Enter Amount(shs)" >
+            </div>
+
+            <div class="input-field">
+              <label>Period of stay</label>
+              <input type="text" id ="periodofstay"placeholder="Enter duration" >
+            </div>
+             
+            <div class="input-field">
+              <label>Emergency Contact</label>
+              <input type="text"id ="emergencycontact" placeholder="Enter Moblie number">
              
             </div>
-            <div class="mb-3">
-              <label for="exampleInputEmail1" class="form-label">Gender</label>
-              <select name="" id="">
-                <option value="">Select Gender</option>
-                <option value="">Female</option>
-                <option value="">Male</option>
-              </select>
-              
-            </div>
-            <div class="mb-3 form-check">
-              <input type="checkbox" class="form-check-input" id="exampleCheck1">
-              <label class="form-check-label" for="exampleCheck1">Register Child Now</label>
-            </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-          </form>
-        
+          </div>
+
+          <button class="submit">submit</button>
+        </div>
+
+      </div>
     </form>
-    <script src="../js/Childregistration.js"></script>
+   </div>
+    <script src="/js/childregistration.js"></script>
 </body>
 </html>
