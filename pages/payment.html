@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css/payment style.css">
+    <title>Payment Form</title>
+</head>
+<body>
+    <div class="wrapper">
+        <h2>Payment Form</h2>
+        <form action="" method="post">
+           <h4>Account</h4>
+           <div  class="input_group">
+            <div class="input_box">
+             <input type="text" placeholder="Full Name" required class="name">
+             
+           </div>
+           <div  class="input_box">
+            <input type="text" placeholder="Name on Card" required class="name">
+           
+
+          </div>
+          <div  class="input_group">
+            <div class="input_box">
+             <input type="email" placeholder="Email Address" required class="name">
+            
+           </div>
+        </div>
+        <div  class="input_group">
+          <div class="input_box">
+           <input type="text" placeholder="Address" required class="name">
+           <i class="fa fa-map-marker icon" aria-hidden="true"></i>
+
+         </div>
+        </div>
+        <div  class="input_group">
+          <div class="input_box">
+           <input type="Text" placeholder="city" required class="name">
+           
+         </div>
+
+
+         <div  class="input_group">
+            <div class="input_box">
+                <h4>Date Of Birth</h4>
+             <input type="Text" placeholder="DD" required class="dob">
+             <input type="Text" placeholder="MM" required class="dob">
+             <input type="Text" placeholder="YYYY" required class="dob">
+             
+  
+           </div>
+           <div class="input_box">
+            <h4>Gender</h4>
+            <input type="radio" name="Gender" required id="b1" checked>
+            <label for="b1">Male</label>
+            <input type="radio" name="Gender" required id="b2" checked>
+            <label for="b2">Female</label>
+ 
+          </div>
+
+          <div class="input_group">
+            <div class="input_box">
+                <h4>Payment Details</h4>
+                <input type="radio" name="pay" class="radio" id="bc1" checked>
+                <label for="bc1"><span>
+                   <i class=" fa fa cc-creidt card">Bank Transfer</i>
+                </span></label>
+                <input type="radio" name="pay" class="radio" id="bc2" checked>
+                <label for="bc2"><span>
+                    <i class="fa fa-moblie-money">Mobile Money</i>
+                </span></label>
+          </div>
+         <!--
+          <div class="input_group">
+            <div class="input_box">
+                <input type="tel" class="name" placeholder="">
+          </div>
+        -->
+      </div>
+      <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+        <label class="form-check-label" for="exampleCheck1">Pay now</label>
+      </div>
+      <!--
+      <div id="message"></div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+      -->
+        </form>
+
+    </div>
+</body>
+</html>
