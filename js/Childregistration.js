@@ -19,7 +19,7 @@ document.getElementById("childform").addEventListener("submit",function(event){
     
 
     const message= document.getElementById("message");
-    message.innerHTML='<div>Sitter Registered</div>'
+    message.innerHTML='<div>Child Registered</div>'
 
     document.getElementById("childform").reset();
     let sitterinfo = {name:name, location:location, gender:gender, babynumber:babynumber, feepaid:feepaid, mothercontact:mothercontact, mothername:mothername, fathercontact:fathercontact, fathername:fathername, periodofstay:periodofstay, broughtchild:broughtchild,age:age, emergencycontact:emergencycontact}
