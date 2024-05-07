@@ -1,0 +1,79 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  link(rel='stylesheet' href='/style/ADdashboard.css')
+  link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.1.0/css/v4-shims.min.css' integrity='sha512-p++g4gkFY8DBqLItjIfuKJPFvTPqcg2FzOns2BNaltwoCOrXMqRIOqgWqWEvuqsj/3aVdgoEo2Y7X6SomTfUPA==' crossorigin='anonymous' referrerpolicy='no-referrer')
+  script(src='https://kit.fontawesome.com/7bcca99956.js' crossorigin='anonymous')
+  title Admin Dashboard
+// html for the admin dashboard
+.container
+  nav
+    ul
+      li
+        a.logo(href='#')
+          img(src='/assets/DAYSTAR.png' alt='')
+          span.nav-item Dashboard
+      li
+        a(href='#')
+          i.fas.fa-home
+          span.nav-item Home
+      li
+        a(href='#')
+          i.fas.fa-user
+          span.nav-item Profile
+      li
+        a(href='#')
+          i.fas.fa-wallet
+          span.nav-item Payments
+      li
+        a(href='#')
+          i.fas.fa-tasks
+          span.nav-item Tasks
+      li
+        a.logout(href='#')
+          i.fas.fa-sign-out-alt
+          span.nav-item Logout
+  section.main
+    .main-top
+      h1 Skills
+      i.fas.fa-user-cog
+    .main-skills
+      .card
+        i.fa-solid.fa-bag-shopping
+        h3 Doll store
+        p All you need
+        button Check
+      .card
+        i.fa-solid.fa-square-check
+        h3 Checkin/out
+        p Attendence
+        button Check
+      .card
+        i.fa-solid.fa-user
+        h3 Sitters
+        p information
+        button Check
+      .card
+        i.fa-solid.fa-users
+        h3 Children
+        p status
+        button Check
+    section.main-course
+      h1 My courses
+      .course-box
+        ul
+          | &lt;
+          li
+            a(href='/pages/registerchild.html') Register Child
+            | In  progress
+          li
+            a(href='/pages/sitterregistration.html') Register Sitter
+          li Incoming
+          li Finished
+        .course
+          .box
+            h3 HTML
+            p 80% - progress
+            button continur
+            i.fab.fa-html5.html

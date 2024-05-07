@@ -1,0 +1,62 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Child Registration - Day Star
+  // -====css=====-
+  link(rel='stylesheet' href='/style/child.css')
+  // -iconout css
+  // <link rel="stylesheet" href="https://unicons.iconsout.com/release/v4.0.0/css/line.css">
+// html for child registration
+#message
+.container
+  header Child Registration
+  form#childform(action='/childregistration' method='POST')
+    .form.first
+      .details.personal
+        span.title Personal Details
+        .fields
+          .input-field
+            label Full Name
+            input#name(type='text' placeholder='Enter your name' name='fullname')
+          .input-field
+            label Date of Birth
+            input#dateofbirth(type='date' placeholder='Enter birth date' name='dateOfBirt')
+          .input-field
+            label Age
+            input#age(type='text' placeholder='Enter age' name='age')
+          .input-field
+            label Gender
+            input#gender(type='text' placeholder='Enter gender' name='gender')
+          .input-field
+            label Mother&apos;s Name
+            input#mothername(type='text' placeholder='Enter name' name='mothersname')
+          .input-field
+            label Father&apos;s Name
+            input#fathername(type='text' placeholder='Enter name' name=' fathersname')
+          .input-field
+            label Mother&apos;s Contact
+            input#mothercontact(type='text' placeholder='Enter moblie number' name=' motherscontact')
+          .input-field
+            label Father&apos;s Contact
+            input#fathercontact(type='text' placeholder='Enter moblienumber' name='fatherscontact')
+          .input-field
+            label Identification
+            input#babynumber(type='text' placeholder="Enter Baby's number" name='identification')
+          .input-field
+            label Location
+            input#location(type='text' placeholder='Enter place of residence'  name='location')
+          .input-field
+            label Who brought child
+            input#broughtchild(type='text' placeholder='Enter name'  name='whobroughtchild')
+          .input-field
+            label Fee paid
+            input#feepaid(type='text' placeholder='Enter Amount(shs)' name=' feespaid')
+          .input-field
+            label Period of stay
+            input#periodofstay(type='text' placeholder='Enter duration' name='periodOfStay')
+          .input-field
+            label Emergency Contact
+            input#emergencycontact(type='text' placeholder='Enter Moblie number' name='emergencycontact')
+          button.submit(type="submit") submit
+//script(src='/js/childregistration.js')
