@@ -9,10 +9,7 @@ const applicationSchema = new mongoose.Schema({
         type:Date,
         trim:true,
     },
-    // email:{
-    //     type:String,
-    //     unique:true,
-    // },
+    
    moblienumber:{
         type:String,
         trim:true,

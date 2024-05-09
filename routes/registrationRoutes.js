@@ -21,6 +21,30 @@ router.post("/sitterregistration", async(req, res) => {
   
 });
 
+//fetching sitter
+router. get("/sitterslist" ,async (req , res) => {
+  try {
+    let sitters = await Application.find()
+    res.render("sittermanagement" , {sitters:sitters})
+  
+  } catch (error) {
+    res.status(400).send("unable to fetch sitters from db")
+  }
+ 
+})
+
+router. get("/delete" ,async (req , res) => {
+  try {
+     await Application.deleteOne({id:req.body.id});
+   res.redirect("back")
+  
+  } catch (error) {
+    res.status(400).send("Sorry! something wrong happened")
+    console.log("Error deleting sitter" , error)
+  }
+ 
+})
+
 const Registration = require("../models/Registration");
 
 router.get("/childregistration", (req, res) => {
@@ -39,5 +63,29 @@ router.post("/childregistration", async(req, res) => {
   }
   
 });
+
+//fetching sitter
+router. get("/babieslist" ,async (req , res) => {
+  try {
+    let babies = await Registration.find()
+    res.render("babymanagement" , {babies:babies})
+  
+  } catch (error) {
+    res.status(400).send("unable to fetch sitters from db")
+  }
+ 
+})
+
+router. get("/delete" ,async (req , res) => {
+  try {
+     await Registration.deleteOne({id:req.body.id});
+   res.redirect("back")
+  
+  } catch (error) {
+    res.status(400).send("Sorry! something wrong happened")
+    console.log("Error deleting baby" , error)
+  }
+ 
+})
 
 module.exports = router;

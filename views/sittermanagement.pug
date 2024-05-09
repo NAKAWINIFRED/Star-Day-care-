@@ -1,0 +1,50 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=, initial-scale=1.0')
+  title sitter list
+h1 Registered sitters
+table 
+  thead
+    tr 
+      th Full Name
+      th Date of Birth 
+      th Moblie Number 
+      th Gender 
+      th Level of Education 
+      th Location 
+      th Religion
+      th NIN 
+      th Next of Kin 
+      th Next of kin&apos;s Contact 
+      th Recommender&apos;s Name 
+      th Recommender&apos;s Contact 
+      th Emergency Contact 
+      th Action 
+tbody#sitters-list
+       if sitters.length 
+        each sitter in sitters 
+         tr 
+          td #{sitter.fullname} 
+          td #{sitter.dateOfBirth}
+          td #{sitter.moblienumber}
+          td #{sitter.gender}
+          td #{sitter.education}
+          td #{sitter.location}
+          td #{sitter.religion}
+          td #{sitter.identification}
+          td #{sitter.nextOfKin}
+          td #{sitter.nextOfKinContact}
+          td #{sitter.recommendername}
+          td #{sitter. recommendercontact}
+          td #{sitter.emergencycontact}
+         tr
+          td
+            a(href="#") Update
+          td
+            form(method="POST", action="/delete")
+              input(type="hidden", name="id", value=sitter._id)
+              button(type="submit") Delete
+footer 
+   p &copy; 2024 DayStar Daycare Facility 
+script(src="../public/js/sittermanagement.js")         
