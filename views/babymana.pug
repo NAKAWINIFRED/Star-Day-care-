@@ -1,0 +1,53 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  link(rel="stylesheet", href="./style/babymanagement.css")
+  title Babies list
+h1 Registered Babies
+table
+  thead
+    tr
+      th Full Name
+      th D.O.B
+      th Age
+      th Gender 
+      th Mother&apos;s Name
+      th Father&apos;s Name
+      th Mother&apos;s Contact
+      th Father&apos;s Contact
+      th Baby Number
+      th Location
+      th Guardian
+      th Fee paid
+      th Period of stay
+      th Emergency Contact 
+      th  Action 
+  tbody#babies-list
+       if babies.length 
+        each baby in babies 
+         tr
+          td #{baby.fullname} 
+          td #{baby.dateOfBirth} 
+          td #{baby.age}
+          td #{baby.gender}
+          td #{baby.mothersname}
+          td #{baby.fathersname}
+          td #{baby.motherscontact}
+          td #{baby.fatherscontact}
+          td #{baby.identification}
+          td #{baby.location}
+          td #{baby.whobroughtchild}
+          td #{baby. feespaid}
+          td #{baby.periodOfStay}
+          td #{baby.emergencycontact}
+         tr
+           td 
+             a(href="/babyUpdate/"+baby._id class="button") Update
+           td 
+             form(method="POST", action="/delete")
+               input(type="hidden", name="id", value=baby._id)
+               button(type="submit" class="button") Delete
+footer 
+   p &copy; 2024 DayStar Daycare Facility 
+script(src="../public/js/sittermanagement.js")

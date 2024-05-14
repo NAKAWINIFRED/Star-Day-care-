@@ -45,6 +45,26 @@ router. get("/delete" ,async (req , res) => {
  
 })
 
+router.get("/sitterUpdate/:id" ,async(req, res)=>{
+  try {
+    const sitterUpdate = await Application.findOne({_id: req. params.id})
+    res.render("updatesitter", {sitter:sitterUpdate});
+  } catch (error) {
+    console.log("error finding sitter", error);
+    res.status(400).send("Unable to find sitter")
+  }
+})
+
+router.post("/sitterUpdate", async(req, res)=>{
+  try {
+    await Application.findOneAndUpdate({_id: req.query.id}, req.body);
+    res.redirect("/sitterslist")
+  } catch (error) {
+    res.status(400).send("Unable to find sitter")
+  }
+})
+
+
 const Registration = require("../models/Registration");
 
 router.get("/childregistration", (req, res) => {
@@ -64,7 +84,7 @@ router.post("/childregistration", async(req, res) => {
   
 });
 
-//fetching sitter
+//fetching baby
 router. get("/babieslist" ,async (req , res) => {
   try {
     let babies = await Registration.find()
@@ -86,6 +106,26 @@ router. get("/delete" ,async (req , res) => {
     console.log("Error deleting baby" , error)
   }
  
+})
+
+//updating sitter
+router.get("/babyUpdate/:id" ,async(req, res)=>{
+  try {
+    const babyUpdate = await Registration.findOne({_id: req. params.id})
+    res.render("updatebabies", {baby:babyUpdate});
+  } catch (error) {
+    console.log("error finding a baby", error);
+    res.status(400).send("Unable to find baby")
+  }
+})
+
+router.post("/babyUpdate", async(req, res)=>{
+  try {
+    await Registration.findOneAndUpdate({_id: req.query.id}, req.body);
+    res.redirect("/babieslist")
+  } catch (error) {
+    res.status(400).send("Unable to find baby")
+  }
 })
 
 module.exports = router;

@@ -8,6 +8,7 @@ require("dotenv").config();
 //importing routes
 const registrationRoutes = require("./routes/registrationRoutes")
 const contactRoutes = require("./routes/contactRoutes")
+// const authenticationRoutes = require("./routes/authenticationRoutes")
 
 //Instantiations
 const app = express();
@@ -38,14 +39,14 @@ app.use(express.json());
 
 
 // routes
-// app.get("/sitterregistration" , (req , res) =>{
-//   res.render("sitterRegistration");
-// });
+
 
 
 //using imported routes
 app.use("/" , registrationRoutes );
 app.use ("/" , contactRoutes);
+// app.use("/", authenticationRoutes)
+
 
 
 

@@ -1,0 +1,28 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  link(rel='stylesheet' href='/styles/login.css')
+  link(rel='stylesheet' href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css')
+  title Admin Login
+// html for the login page
+.wrapper
+  h2 Admin Login
+  form(action='' method='post')
+    h4 Account
+    .input_box
+      input(type='text' placeholder='User Name' required='')
+      i.bx.bxs-user
+    .input_box
+      input(type='password' placeholder='Password' required='')
+      box-icon(type='solid' name='lock-alt')
+    .remember-forgot
+      label
+        input(type='checkbox')
+        |  Remember me
+      a(href='#') Forgot Password
+    button.btn(type='submit') Login
+    .register-link
+      p
+        | Don&apos;t have an Account? 
+        a(href='#') Register

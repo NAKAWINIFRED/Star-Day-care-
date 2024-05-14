@@ -22,6 +22,14 @@ router.post("/contact", async (req, res)=>{
     } catch (error) {
         console.error(error);
     }
-})
+});
 
+router.get("/", (req, res)=> {
+    res.render("index");//
+  });
+  
+  router.get("/dashboard", (req, res)=> {
+    res.render("admindash");//
+  });
+  
 module.exports = router;
