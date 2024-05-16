@@ -2,13 +2,25 @@
 const express = require("express");//for posting 
 const mongoose = require("mongoose")//for mongodb
 const path = require("path");
+const passport = require("passport");
+const expressSession = require("express-session")({
+  secret:"secret",
+  resave:false,
+  saveUninitialized:false
+})
 
 
 require("dotenv").config();
+
+// import register model with user details
+const Register = require("./models/register");
+
 //importing routes
 const registrationRoutes = require("./routes/registrationRoutes")
 const contactRoutes = require("./routes/contactRoutes")
-// const authenticationRoutes = require("./routes/authenticationRoutes")
+const adminRegister = require("./routes/adminRegistrationRoutes")
+const authenticationRoutes = require("./routes/authenticationRoutes")
+
 
 //Instantiations
 const app = express();
@@ -36,6 +48,15 @@ app.use(express.static(path.join(__dirname, "public")))//set directory for stati
 app.use(express.urlencoded({extended:true}));
 app.use(express.json());
 
+// //express session configs
+ app.use(expressSession);
+ app.use(passport.initialize());
+ app.use(passport.session());
+
+//  //passport configs
+ passport.use(Register.createStrategy());
+ passport.serializeUser(Register.serializeUser());
+ passport.deserializeUser(Register.deserializeUser());
 
 
 // routes
@@ -45,7 +66,8 @@ app.use(express.json());
 //using imported routes
 app.use("/" , registrationRoutes );
 app.use ("/" , contactRoutes);
-// app.use("/", authenticationRoutes)
+app.use ("/", adminRegister )
+app.use("/", authenticationRoutes)
 
 
 

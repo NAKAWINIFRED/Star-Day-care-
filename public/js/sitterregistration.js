@@ -15,10 +15,23 @@ document.getElementById("sitterform").addEventListener("submit",function(event){
     const recommendercontact = document.getElementById("recommendercontact").value;
     const emergencycontact = document.getElementById("emergencycontact").value;
     
-    if (!fullname || !dob || !mobile || !gender || !education || !location || !religion || !identification || !nextOfKin || !nextOfKinContact || !recommenderName || !recommenderContact || !emergencyContact) {
-      alert("Please fill in all fields.");
-      event.preventDefault();
+    // if (!fullname || !dob || !mobile || !gender || !education || !location || !religion || !identification || !nextOfKin || !nextOfKinContact || !recommenderName || !recommenderContact || !emergencyContact) {
+    //   alert("Please fill in all fields.");
+    //   event.preventDefault();
+
+    // Validation
+    if (name === "" || location === "" || gender === "" || nin === "" || nextofkin === "" || recommender === "" || religion === "" || levelofeducation === "" || dateofbirth === "" || email === "" || nextofkincontact === "" || recommendercontact === "" || emergencycontact === "") {
+      alert("Please fill in all required fields.");
+      return;
   }
+
+  // Example of email validation
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(email)) {
+      alert("Please enter a valid email address.");
+      return;
+  }
+  
 
 
     

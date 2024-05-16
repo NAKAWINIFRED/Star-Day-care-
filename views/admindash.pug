@@ -31,12 +31,12 @@ head
           i.fas.fa-tasks
           span.nav-item Tasks
       li
-        a.logout(href='#')
+        a.logout(href='/logout' class='button')
           i.fas.fa-sign-out-alt
           span.nav-item Logout
   section.main
     .main-top
-      h1 Skills
+      h1 My Board 
       i.fas.fa-user-cog
     .main-skills
       .card
@@ -59,21 +59,21 @@ head
         h3 Children
         p status
         button Check
+        
     section.main-course
-      h1 My courses
+      h1 
       .course-box
         ul
           | &lt;
           li
-            a(href='/pages/registerchild.html') Register Child
-            | In  progress
+            a(href='/childregistration' class='button') Register Child
+           
           li
-            a(href='/pages/sitterregistration.html') Register Sitter
-          li Incoming
-          li Finished
+            a(href='/sitterregistration') Register Sitter
+          
         .course
           .box
-            h3 HTML
-            p 80% - progress
-            button continur
-            i.fab.fa-html5.html
+            h3 Sitters
+            p Assign Sitters
+            button Assign
+           

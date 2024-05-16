@@ -8,19 +8,14 @@ head
 // html for the login page
 .wrapper
   h2 Admin Login
-  form(action='' method='post')
+  form(action='login' method='POST')
     h4 Account
     .input_box
-      input(type='text' placeholder='User Name' required='')
+      input(type='text' placeholder='Email' name='email')
       i.bx.bxs-user
     .input_box
-      input(type='password' placeholder='Password' required='')
+      input(type='password' placeholder='Password' name='password')
       box-icon(type='solid' name='lock-alt')
-    .remember-forgot
-      label
-        input(type='checkbox')
-        |  Remember me
-      a(href='#') Forgot Password
     button.btn(type='submit') Login
     .register-link
       p

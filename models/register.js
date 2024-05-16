@@ -9,7 +9,7 @@ const registerSchema = new mongoose.Schema({
     },
     email:{
         type:String,
-        unique:true,
+        // unique:true,
         trim:true
 
     },
@@ -19,7 +19,7 @@ const registerSchema = new mongoose.Schema({
     },
 });
 
-//  signupSchema.plugin(passportLocalMongoose, {
-//     usernameFeild:"email"
-// })
+ registerSchema.plugin(passportLocalMongoose, {
+     usernameField:"email"
+ })
 module.exports = mongoose.model("Register", registerSchema)
