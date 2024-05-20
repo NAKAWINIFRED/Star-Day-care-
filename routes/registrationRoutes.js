@@ -159,7 +159,17 @@ router. get("/babiesPresent",async (req , res) => {
   }
  
 })
-router.post("/babyCheckin", async (req, res) => {
+router.get("/babyCheckout/:id", async (req, res) => {
+  try {
+    const sitters = await Application.find({attendance:'clockedout'});
+    const checkinBaby = await Registration.findOne({ _id: req.params.id });
+    res.render("babyCheckout", { baby: checkinBaby, sitters: sitters });
+  } catch (error) {
+    console.log("Error checking-in baby", error);
+    res.status(400).sendStatus("unable to check-in baby");
+  }
+});
+router.post("/babyCheckout", async (req, res) => {
   try {
     await Registration.findByIdAndUpdate({ _id: req.query.id }, req.body);
     res.redirect("/babiesPresent");
@@ -167,4 +177,5 @@ router.post("/babyCheckin", async (req, res) => {
     res.status(400).sendStatus("unable to check-in baby");
   }
 });
+
 module.exports = router;
