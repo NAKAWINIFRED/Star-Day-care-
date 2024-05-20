@@ -1,0 +1,59 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Contact Us
+  script(src='https://kit.fontawesome.com/64d58efce2.js' crossorigin='anonymous')
+  link(rel='stylesheet' href='/styles/contact.css')
+// this is html for the contact page
+.container
+  span.big-circle
+  .form
+    .contact-info
+      h3.title Let&apos;s get in touch
+      p.text
+        | Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum atque repudiandae consequatur ea quibusdam eum autem non enim obcaecati sed doloremque a at sapiente ipsam, hic architecto ad fuga accusamus!
+      .info
+        .information
+          img.icon(src='/assets/location.png' alt='')
+          p Kabalagala opp Shazma plaza
+        .information
+          img.icon(src='/assets/email.png' alt='')
+          p Daystar@daycare.com
+        .information
+          img.icon(src='/assets/phone.png' alt='')
+          p +256783100141
+      .social-media
+        p Connect with us :
+        .social-icons
+          a(href='#')
+            i.fab.fa-facebook-f
+          a(href='#')
+            i.fab.fa-twitter
+          a(href='#')
+            i.fab.fa-instagram
+          a(href='#')
+            i.fab.fa-whatsapp
+    .contact-form
+      span.circle.one
+      span.circle.two
+      form(action="/contact" method="POST")
+        h3.title Contact us
+        .input-container
+          input.input(type='text' name='name')
+          label(for='') Username
+          span Username
+        .input-container
+          input.input(type='email' name='email')
+          label(for='') Email
+          span Email
+        .input-container
+          input.input(type='tel' name='phone')
+          label(for='') Phone
+          span Phone
+        .input-container.textarea
+          textarea.input(name='message')
+          label(for='') Message
+          span Message
+        input.btn(type='submit' value='send')
+script(src='/js/contact.js')

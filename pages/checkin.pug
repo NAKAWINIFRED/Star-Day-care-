@@ -1,0 +1,37 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Document
+h2 Baby Check-in form
+form.row.g-3
+  .col-md-6
+    label.form-label(for='fullName') Full Name
+    input#fullName.form-control(type='text')
+  .col-md-6
+    label.form-label(for='inputPassword4') Who brought child
+    input#inputPassword4.form-control(type='password')
+  .col-12
+    label.form-label(for='inputAddress') Telephone Number
+    input#inputAddress.form-control(type='text' placeholder='1234 Main St')
+  .col-12
+    label.form-label(for='inputAddress2') Time of arrival
+    input#inputAddress2.form-control(type='text' placeholder='Apartment, studio, or floor')
+  .col-md-6
+    label.form-label(for='inputCity') Assgin sitter
+    input#inputCity.form-control(type='text')
+  .col-md-4
+    label.form-label(for='inputState') Period of stay
+    select#inputState.form-select
+      option(selected='') Choose...
+      option ...
+  .col-md-2
+    label.form-label(for='inputZip') Fee paid
+    input#inputZip.form-control(type='text')
+  .col-12
+    .form-check
+      input#gridCheck.form-check-input(type='checkbox')
+      label.form-check-label(for='gridCheck')
+        | Check me out
+  .col-12
+    button.btn.btn-primary(type='submit') Sign in

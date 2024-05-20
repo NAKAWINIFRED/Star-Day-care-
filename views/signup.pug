@@ -1,0 +1,25 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  link(rel='stylesheet' href='/styles/sign.css')
+  link(rel='stylesheet' href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css')
+  title Admin Signup
+// html for the login page
+.wrapper
+  h2 Admin
+  form(action='/signup' method='POST')
+    h4  Create Account
+    .input_box
+      input(type='text' placeholder='Fullname' name='fullname')
+      i.bx.bxs-user
+      .input_box
+        input(type='email' placeholder='Email' name='email')
+        i.bx.bxs-user
+      .input_box
+        input(type='password' placeholder='Password' name='password')
+        box-icon(type='solid' name='lock-alt')
+      .remember-forgot
+      button.btn(type='submit') Sign up
+      .register-link
+        

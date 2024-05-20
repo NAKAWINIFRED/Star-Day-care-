@@ -1,0 +1,60 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title sitter update- Day Star
+  // -====css=====-
+  link(rel='stylesheet' href='/styles/sitter.css')
+  // -iconout css
+  // <link rel="stylesheet" href="https://unicons.iconsout.com/release/v4.0.0/css/line.css">
+// html for sitter registration
+#message
+.container
+  header Update Form
+  form#sitterform(action='/sitterUpdate?id='+sitter._id method='POST')
+    .form.first
+      .details.personal
+        span.title Personal Details
+        .fields
+          .input-field
+            label Full Name
+            input#name(type='text' placeholder='Enter your name' name='fullname' value=fullname)
+          .input-field
+            label Date of Birth
+            input#dateofbirth(type='date' placeholder='Enter birth date' name='dateOfBirth' value=dateOfBirth)
+          .input-field
+            label Moblie Number
+            input#moblienumber(type='text' placeholder='Enter Moblie number' name='moblienumber' value=moblienumber)
+          .input-field
+            label Gender
+            input#gender(type='text' placeholder='Enter your Gender' name='gender' value=gender)
+          .input-field
+            label Education
+            input#levelofeducation(type='text' placeholder='Enter level of Education' name='education' value=education)
+          .input-field
+            label Location
+            input#location(type='text' placeholder='Enter place of residence' name='location' value=location)
+          .input-field
+            label Religion
+            input#religion(type='text' placeholder='Enter your religion' name='religion' value=religion)
+          .input-field
+            label Identification
+            input#nin(type='text' placeholder='Enter NIN' name='identification' value=identification)
+        
+          .input-field
+            label Next of kin
+            input#nextofkin(type='text' placeholder='Enter name' name='nextOfKin' value=nextOfKin)
+          .input-field
+            label Next of kin Contact
+            input#nextofkincontact(type='text' placeholder='Enter Moblie number' name='nextOfKinContact' value=nextOfKinContact)
+          .input-field
+            label Recommender&apos;s Name
+            input#recommender(type='text' placeholder='Enter name' name='recommendername' value=recommendername)
+          .input-field
+            label Recommender&apos;s Contact
+            input#recommendercontact(type='text' placeholder='Enter Moblie number' name='recommendercontact' value=recommendercontact)
+          .input-field
+            label Emergency Contact
+            input#emergencycontact(type='text' placeholder='Enter Moblie number' name='emergencycontact' value=emergencycontact)
+          button.submit(type='submit') Update
+//script(src='/js/sitterregistration.js')

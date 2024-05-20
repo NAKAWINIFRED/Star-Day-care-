@@ -1,105 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sitter Registration - Day Star</title>
     <!---====css=====--->
-    <link rel="stylesheet" href="/style/sitter.css">
+    <link rel="stylesheet" href="/style/sitter.css" />
     <!---iconout css-->
     <!-- <link rel="stylesheet" href="https://unicons.iconsout.com/release/v4.0.0/css/line.css"> -->
-    
-</head>
-<!-- html for sitter registration -->
-<body>
-  <div id="message"></div>
-   <div class="container">
-    <header>Sitter Registration</header>
+  </head>
+  <!-- html for sitter registration -->
+  <body>
+    <div id="message"></div>
+    <div class="container">
+      <header>Sitter Registration</header>
 
-    <form action="#" id="sitterform">
-      <div class="form first">
-        <div class="details personal">
-          <span class="title">Personal Details</span>
-          
-          <div class="fields">
-            <div class="input-field">
-              <label>Full Name</label>
-              <input type="text" id ="name" placeholder="Enter your name" >
+      <form action="#" id="sitterform">
+        <div class="form first">
+          <div class="details personal">
+            <span class="title">Personal Details</span>
+
+            <div class="fields">
+              <div class="input-field">
+                <label>Full Name</label>
+                <input type="text" id="name" placeholder="Enter your name" />
+              </div>
+
+              <div class="input-field">
+                <label>Date of Birth</label>
+                <input
+                  type="date"
+                  id="dateofbirth"
+                  placeholder="Enter birth date"
+                />
+              </div>
+
+              <div class="input-field">
+                <label>Email</label>
+                <input type="text" id="email" placeholder="Enter your email" />
+              </div>
+
+              <div class="input-field">
+                <label>Moblie Number</label>
+                <input
+                  type="text"
+                  id="moblienumber"
+                  placeholder="Enter Moblie number"
+                />
+              </div>
+
+              <div class="input-field">
+                <label>Gender</label>
+                <input
+                  type="text"
+                  id="gender"
+                  placeholder="Enter your Gender"
+                />
+              </div>
+
+              <div class="input-field">
+                <label>Education</label>
+                <input
+                  type="text"
+                  id="levelofeducation"
+                  placeholder="Enter level of Education "
+                />
+              </div>
+
+              <div class="input-field">
+                <label>Location</label>
+                <input
+                  type="text"
+                  id="location"
+                  placeholder="Enter place of residence"
+                />
+              </div>
+
+              <div class="input-field">
+                <label>Religion</label>
+                <input
+                  type="text"
+                  id="religion"
+                  placeholder="Enter your religion"
+                />
+              </div>
+
+              <div class="input-field">
+                <label>Identification</label>
+                <input type="text" id="nin" placeholder="Enter NIN" />
+              </div>
+
+              <div class="input-field">
+                <label>Next of kin</label>
+                <input type="text" id="nextofkin" placeholder="Enter name " />
+              </div>
+
+              <div class="input-field">
+                <label>Next of kin Contact</label>
+                <input
+                  type="text"
+                  id="nextofkincontact"
+                  placeholder="Enter Moblie number"
+                />
+              </div>
+
+              <div class="input-field">
+                <label>Recommender's Name</label>
+                <input type="text" id="recommender" placeholder="Enter name" />
+              </div>
+
+              <div class="input-field">
+                <label>Recommender's Contact</label>
+                <input
+                  type="text"
+                  id="recommendercontact"
+                  placeholder="Enter Moblie number"
+                />
+              </div>
+
+              <div class="input-field">
+                <label>Emergency Contact</label>
+                <input
+                  type="text"
+                  id="emergencycontact"
+                  placeholder="Enter Moblie number"
+                />
+              </div>
             </div>
 
-            <div class="input-field">
-              <label>Date of Birth</label>
-              <input type="date" id ="dateofbirth" placeholder="Enter birth date" >
-            </div>
-
-            <div class="input-field">
-              <label>Email</label>
-              <input type="text" id ="email" placeholder="Enter your email" >
-            </div>
-
-            <div class="input-field">
-              <label>Moblie Number</label>
-              <input type="text" id ="moblienumber"placeholder="Enter Moblie number">
-            </div>
-
-            <div class="input-field">
-              <label>Gender</label>
-              <input type="text"id ="gender" placeholder="Enter your Gender" >
-            </div>
-
-            <div class="input-field">
-              <label>Education</label>
-              <input type="text"id ="levelofeducation" placeholder="Enter level of Education ">
-            </div>
-
-            <div class="input-field">
-              <label>Location</label>
-              <input type="text"id ="location" placeholder="Enter place of residence">
-            </div>
-
-            <div class="input-field">
-              <label>Religion</label>
-              <input type="text" id ="religion" placeholder="Enter your religion">
-            </div>
-
-            <div class="input-field">
-              <label>Identification</label>
-              <input type="text" id ="nin" placeholder="Enter NIN">
-            </div>
-
-            <div class="input-field">
-              <label>Next of kin</label>
-              <input type="text"id ="nextofkin" placeholder="Enter name ">
-            </div>
-
-            <div class="input-field">
-              <label>Next of kin Contact</label>
-              <input type="text"id ="nextofkincontact" placeholder="Enter Moblie number">
-            </div>
-
-            <div class="input-field">
-              <label>Recommender's Name</label>
-              <input type="text" id ="recommender" placeholder="Enter name" >
-            </div>
-
-            <div class="input-field">
-              <label>Recommender's Contact</label>
-              <input type="text" id ="recommendercontact"placeholder="Enter Moblie number" >
-            </div>
-             
-            <div class="input-field">
-              <label>Emergency Contact</label>
-              <input type="text"id ="emergencycontact" placeholder="Enter Moblie number">
-             
-            </div>
+            <button class="submit">submit</button>
           </div>
-
-          <button class="submit">submit</button>
         </div>
-
-      </div>
-    </form>
-   </div>
+      </form>
+    </div>
     <script src="/js/sitterregistration.js"></script>
-</body>
+  </body>
 </html>

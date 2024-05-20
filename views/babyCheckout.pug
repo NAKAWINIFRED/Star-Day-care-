@@ -1,0 +1,33 @@
+
+html
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.1.0/css/v4-shims.min.css' integrity='sha512-p++g4gkFY8DBqLItjIfuKJPFvTPqcg2FzOns2BNaltwoCOrXMqRIOqgWqWEvuqsj/3aVdgoEo2Y7X6SomTfUPA==' crossorigin='anonymous' referrerpolicy='no-referrer')
+    link(rel='stylesheet' href='/styles/clockinout.css')
+    title Clock In/Out Form
+  body
+    .container
+      h1 Baby Check out
+      form#clock-form(action='/babyCheckin?id='+baby._id, method='POST')
+        .form-group
+          label(for='fullName') Full Name
+          input#fullName(type='text' name='fullName' required)
+        .form-group
+          label(for='broughtchild') Who brought child
+          input#broughtchild(type='text' name='broughtchild' required)
+        .form-group
+          label(for='mothercontact') Mobile Number
+          input#mothercontact(type='text' name='mothercontact' required)
+        .form-group
+          label(for='action') Action
+          select#action(name='action' required)
+           option(value='clock-in') Clock In
+           option(value='clock-out') Clock Out
+        .form-group
+          label(for='timestamp') Timestamp
+          input#timestamp(type='datetime-local' name='timestamp' required)
+        .form-group
+          input#timestamp(type='hidden', value='clockedout', name='attendance')
+        button.button(type='submit') Submit
+
