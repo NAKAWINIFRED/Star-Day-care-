@@ -9,7 +9,7 @@ html
   body
     .container
       h1 Baby Check out
-      form#clock-form(action='/babyCheckin?id='+baby._id, method='POST')
+      form#clock-form(action='/babyCheckout?id='+baby._id, method='POST')
         .form-group
           label(for='fullName') Full Name
           input#fullName(type='text' name='fullName' required)

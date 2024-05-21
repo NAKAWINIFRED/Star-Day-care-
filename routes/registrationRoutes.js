@@ -172,7 +172,7 @@ router.get("/babyCheckout/:id", async (req, res) => {
 router.post("/babyCheckout", async (req, res) => {
   try {
     await Registration.findByIdAndUpdate({ _id: req.query.id }, req.body);
-    res.redirect("/babiesPresent");
+    res.redirect("/dashboard");
   } catch (error) {
     res.status(400).sendStatus("unable to check-in baby");
   }
